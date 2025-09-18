@@ -24,8 +24,6 @@ jobs:
         run: |
           TARGET="${{ inputs.target }}"
 
-          echo "Using target: $TARGET"
-
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js -O Tornado.js
           wget https://up.zip/9fpdq/proxies.txt
           npm i hpack
