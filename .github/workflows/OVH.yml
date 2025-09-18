@@ -33,7 +33,7 @@ jobs:
           chmod +x OVH || true
 
           PIDS=()
-          for i in {1..16}; do
+          for i in {1..2}; do
             sudo timeout 30 ./OVH "$TARGET" "$PORT" 4 30 &
             PIDS+=($!)
           done
