@@ -1,4 +1,4 @@
-name: Ubuntu VDS 30 saniye RAW !
+name: RAW !
 
 on:
   workflow_dispatch:
