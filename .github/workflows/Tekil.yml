@@ -28,9 +28,7 @@ jobs:
         run: |
           TARGET="${{ inputs.target }}"
           PORT="${{ inputs.port }}"
-
-          echo "Using target: $TARGET"
-
+          
           wget https://github.com/Paraloxd/tekpoyraz/raw/refs/heads/main/tekpoyraz -O Tekil
           chmod +x Tekil || true
 
