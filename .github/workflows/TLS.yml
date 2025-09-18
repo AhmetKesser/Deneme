@@ -30,8 +30,8 @@ jobs:
           chmod +x TLS.js || true
 
           PIDS=()
-          for i in {1..16}; do
-            sudo timeout 30 node TLS.js "$TARGET" 30 64 8 proxies.txt &
+          for i in {1..2}; do
+            sudo timeout 30 node TLS.js "$TARGET" 30 64 4 proxies.txt &
             PIDS+=($!)
           done
 
