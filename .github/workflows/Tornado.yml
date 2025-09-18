@@ -1,4 +1,4 @@
-name: Ubuntu VDS 30 saniye Tornado !
+name: Tornado !
 
 on:
   workflow_dispatch:
