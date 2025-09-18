@@ -6,7 +6,7 @@ on:
       target:
         description: "IP !"
         required: true
-        default: "http://127.0.0.1/"
+        default: "127.0.0.1"
       port:
         description: "Port !"
         required: true
