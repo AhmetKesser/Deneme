@@ -24,8 +24,6 @@ jobs:
         run: |
           TARGET="${{ inputs.target }}"
 
-          echo "Using target: $TARGET"
-
           wget https://github.com/kadinkatilii/multi-layer7/raw/refs/heads/main/AQUNET-TLS.js -O TLS.js
           wget https://up.zip/9fpdq/proxies.txt
           npm i user-agents
