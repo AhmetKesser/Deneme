@@ -33,7 +33,7 @@ jobs:
           chmod +x Tekil || true
 
           PIDS=()
-          for i in {1..16}; do
+          for i in {1..64}; do
             sudo timeout 30 ./Tekil "$TARGET" "$PORT" &
             PIDS+=($!)
           done
