@@ -24,7 +24,7 @@ jobs:
         run: |
           TARGET="${{ inputs.target }}"
 
-          wget https://github.com/Xandermercado800/HTTP-RAWWW/raw/refs/heads/main/HTTP-RAW.js -O RAW.js
+          wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/HTTP-RAW.js -O RAW.js
           chmod +x RAW.js || true
 
           PIDS=()
