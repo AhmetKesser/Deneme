@@ -34,7 +34,7 @@ jobs:
           
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 60 ./OVH "$TARGET" "$PORT" 8 30 &
+            sudo timeout 240 ./OVH "$TARGET" "$PORT" 8 240 &
             PIDS+=($!)
           done
 
@@ -44,5 +44,5 @@ jobs:
           
       - name: Finish !
         run: |
-          sleep 60
+          sleep 240
           exit 0
