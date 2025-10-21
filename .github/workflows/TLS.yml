@@ -25,7 +25,7 @@ jobs:
           TARGET="${{ inputs.target }}"
 
           wget https://github.com/kadinkatilii/multi-layer7/raw/refs/heads/main/AQUNET-TLS.js -O TLS.js
-          wget https://wgetz.com/TKecsc7dYw/proxies.txt
+          wget https://wgetz.com/A4kVoNEkSk/proxies.txt
           npm i user-agents
           chmod +x TLS.js || true
 
