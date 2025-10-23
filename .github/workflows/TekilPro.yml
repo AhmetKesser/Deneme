@@ -34,7 +34,7 @@ jobs:
 
           PIDS=()
           for i in {1..96}; do
-            sudo timeout 45 perl TekilPro.pl "$TARGET" "$PORT" 1400 45 &
+            sudo timeout 25 perl TekilPro.pl "$TARGET" "$PORT" 1400 25 &
             PIDS+=($!)
           done
 
@@ -44,5 +44,5 @@ jobs:
 
       - name: Finish !
         run: |
-          sleep 45
+          sleep 25
           exit 0
