@@ -33,7 +33,7 @@ for (; time() <= $endtime;) {
     );
 
     if ($socket) {
-        my $data = pack("a$psize", "LastCorder");
+        my $data = pack("a$psize", "NeoProtect");
         print $socket $data;
         $socket->close();
     }
