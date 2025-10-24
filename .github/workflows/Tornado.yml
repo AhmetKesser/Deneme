@@ -25,7 +25,7 @@ jobs:
           TARGET="${{ inputs.target }}"
 
           wget https://github.com/kaneious/tornado/raw/refs/heads/main/tornado.js -O Tornado.js
-          wget https://up.zip/9fpdq/proxies.txt
+          wget https://raw.githubusercontent.com/TheSpeedX/PROXY-List/refs/heads/master/http.txt
           npm i hpack
           chmod +x Tornado.js || true
 
