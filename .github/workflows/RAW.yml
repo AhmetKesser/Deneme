@@ -26,6 +26,7 @@ jobs:
 
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/HTTP-RAW.js -O RAW.js
           chmod +x RAW.js || true
+          npm i undici user-agents
 
           PIDS=()
           for i in {1..2}; do
