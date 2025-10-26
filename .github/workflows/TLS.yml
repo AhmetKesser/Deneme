@@ -31,7 +31,7 @@ jobs:
 
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 30 node TLS.js "$TARGET" 30 64 4 http.txt &
+            sudo timeout 45 node TLS.js "$TARGET" 45 64 4 http.txt &
             PIDS+=($!)
           done
 
@@ -41,5 +41,5 @@ jobs:
 
       - name: Finish !
         run: |
-          sleep 30
+          sleep 45
           exit 0
