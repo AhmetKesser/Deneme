@@ -29,7 +29,7 @@ jobs:
 
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 30 node RAW.js "$TARGET" 30 &
+            sudo timeout 90 node RAW.js "$TARGET" 90 &
             PIDS+=($!)
           done
 
@@ -39,5 +39,5 @@ jobs:
 
       - name: Finish !
         run: |
-          sleep 30
+          sleep 90
           exit 0
