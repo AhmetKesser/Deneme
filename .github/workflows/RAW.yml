@@ -28,8 +28,8 @@ jobs:
           chmod +x RAW.js || true
 
           PIDS=()
-          for i in {1..4}; do
-            sudo timeout 250 node RAW.js "$TARGET" 250 &
+          for i in {1..2}; do
+            sudo timeout 30 node RAW.js "$TARGET" 30 &
             PIDS+=($!)
           done
 
@@ -39,5 +39,5 @@ jobs:
 
       - name: Finish !
         run: |
-          sleep 250
+          sleep 30
           exit 0
