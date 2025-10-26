@@ -1,37 +1,21 @@
 const { request } = require('undici');
 const UserAgent = require('user-agents');
-const cluster = require('cluster');
-const os = require('os');
 
-const TARGET_URL = process.argv[2] || 'https://test.zoomov.cat';
+const TARGET_URL = 'https://test.zoomov.cat';
 
-const numCPUs = os.cpus().length * 2;
-
-if (cluster.isMaster) {
+setInterval(async () => {
   try {
-    new URL(TARGET_URL);
+    const userAgent = new UserAgent().toString();
+
+    const { statusCode, headers, body } = await request(TARGET_URL, {
+      headers: {
+        'User-Agent': userAgent,
+      },
+      method: 'GET',
+    });
+
+    //console.log(`[${new Date().toISOString()}] ${TARGET_URL} -> ${statusCode}`);
   } catch (err) {
-    process.exit(1);
+    //console.error('İstek hatası:', err.message);
   }
-
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
-
-  cluster.on('exit', (worker, code, signal) => {
-    cluster.fork();
-  });
-} else {
-  setInterval(async () => {
-    try {
-      const userAgent = new UserAgent().toString();
-
-      const { statusCode, headers, body } = await request(TARGET_URL, {
-        headers: {
-          'User-Agent': userAgent,
-        },
-        method: 'GET',
-      });
-    } catch (err) {}
-  }, 0);
-}
+}, 0);
