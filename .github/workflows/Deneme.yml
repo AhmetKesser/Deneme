@@ -5,7 +5,7 @@ on:
 
 jobs:
   vds:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       max-parallel: 35
       matrix:
