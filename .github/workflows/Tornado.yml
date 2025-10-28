@@ -31,7 +31,7 @@ jobs:
 
           PIDS=()
           for i in {1..2}; do
-            sudo timeout 30 node Tornado.js GET "$TARGET" 30 4 64 proxies.txt --full --query 3 &
+            sudo timeout 30 node Tornado.js GET "$TARGET" 30 4 64 http.txt --full --query 3 &
             PIDS+=($!)
           done
 
