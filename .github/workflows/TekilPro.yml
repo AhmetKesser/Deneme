@@ -33,8 +33,8 @@ jobs:
           chmod +x TekilPro.pl || true
 
           PIDS=()
-          for i in {1..128}; do
-            sudo timeout 30 perl TekilPro.pl "$TARGET" "$PORT" 1440 30 &
+          for i in {1..32}; do
+            sudo timeout 30 perl TekilPro.pl "$TARGET" "$PORT" 1400 30 &
             PIDS+=($!)
           done
 
